@@ -1,0 +1,20 @@
+#!/bin/bash
+mysql -uroot -p$sqlpasswd -e "CREATE DATABASE fos"
+mysql -uroot -p$sqlpasswd -e "grant all privileges on fos.* to 'fos'@'localhost' identified by '$sqlpasswd'"
+sed -i 's/xxx/fos/g' /home/fos-streaming/fos/www/config.php
+sed -i 's/zzz/'$sqlpasswd'/g' /home/fos-streaming/fos/www/config.php
+sed -i 's/ttt/fos/g' /home/fos-streaming/fos/www/config.php
+mkdir -p /home/fos-streaming/fos/www1/; mkdir -p /home/fos-streaming/fos/www1/log/; chown nginx:nginx /home/fos-streaming/fos/www1/log/; cp -R /home/fos-streaming/fos/www/* /home/fos-streaming/fos/www1/; rm -rf /home/fos-streaming/fos/www1/*.*
+rm -rf /home/fos-streaming/fos/www1/hl
+ln -s /home/fos-streaming/fos/www/hl /home/fos-streaming/fos/www1/hl
+ln -s /home/fos-streaming/fos/www/config.php /home/fos-streaming/fos/www1/config.php
+ln -s /home/fos-streaming/fos/www/functions.php /home/fos-streaming/fos/www1/functions.php
+ln -s /home/fos-streaming/fos/www/stream.php /home/fos-streaming/fos/www1/stream.php
+ln -s /home/fos-streaming/fos/www/playlist.php /home/fos-streaming/fos/www1/playlist.php
+ln -sf /etc/alternatives/php /home/fos-streaming/fos/php/bin/php
+service php7.3-fpm stop
+service php7.3-fpm start
+/home/fos-streaming/fos/nginx/sbin/nginx_fos
+curl -s http://127.0.0.1:7777/install_database_tables.php?install
+curl -s http://127.0.0.1:7777/install_database_tables.php?update
+rm -rf /home/fos-streaming/fos/www/install_database_tables.php
