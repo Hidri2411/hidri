@@ -19,6 +19,7 @@ echo -e "${jeshile} ┌───────────────────
 echo -e "${jeshile} │   Installing Web Server   │ \e[0m"
 echo -e "${jeshile} └───────────────────────────┘ \e[0m"
 echo " "
+sudo add-apt-repository -y ppa:ondrej/php
 apt-get update && apt-get upgrade -y && apt-get install htop -y
 apt-get install lsb-release nscd curl php5.6 php5.6-mysql php5.6-cli php5.6-curl unzip curl libcurl3 libcurl3-dev php5.6-curl -y
 sudo apt-get update && sudo apt-get install vlc vlc-plugin-* -y && sudo apt-get install vlc browser-plugin-vlc -y
