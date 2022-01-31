@@ -19,16 +19,17 @@ I just fix install
 - predefined transcode profiles
 
 
-## Installation
-1. **`SUPPORTED DISTRO : Debian 9, 64 BIT`**
-2. **`su`**
-3. **`cd`**
-4. **`apt-get install curl -y`**
-5. **`curl -s https://raw.githubusercontent.com/Hidri2411/hidri/main/fos-stream-panel-v69 | bash`**
-6. **`Visit : http://your-ip:7777/ login with User : admin Password : admin`**
-7. **`Change "Web ip: *" with your public IPv4 server ip at http://your-ip:7777/settings.php`**
-8. crontab -e `*/2 * * * * /etc/alternatives/php /home/fos-streaming/fos/www/cron.php`
-9. **`Mysql Password : cat /root/MYSQL_ROOT_PASSWORD`**
+## Installation SUPPORTED DISTRO : Debian 9, 64 BIT only !!
+1. **`su`**
+2. **`cd`**
+3. **`apt-get install curl -y`**
+4. **`curl -s https://raw.githubusercontent.com/Hidri2411/hidri/main/fos-stream-panel-v69 | bash`**
+5. **`Visit : http://your-ip:7777/ login with User : admin Password : admin`**
+
+
+-**`Change "Web ip: *" with your public IPv4 server ip at http://your-ip:7777/settings.php`**
+-**`crontab -e `*/2 * * * * /etc/alternatives/php /home/fos-streaming/fos/www/cron.php`**
+-**`Mysql Password : cat /root/MYSQL_ROOT_PASSWORD`**
 
 
 ### Change port of panel
