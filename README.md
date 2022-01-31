@@ -19,7 +19,7 @@ I just fix install
 - predefined transcode profiles
 
 
-## Installation SUPPORTED DISTRO : Debian 9, 64 BIT only !!
+## Installation SUPPORTED DISTRO : Debian 9 minimal , 64 BIT only !!
 1. **`su`**
 2. **`cd`**
 3. **`apt-get install curl -y`**
