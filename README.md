@@ -1,5 +1,5 @@
 # FOS-Streaming-v69 
-<<I just fix install>>
+I just fix install
 ## Features:
 - Streaming and restreaming (authentication, m3u8)
 - Manage users (overview, add, edit, delete, enable, disable)
