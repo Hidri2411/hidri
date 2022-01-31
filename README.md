@@ -27,9 +27,9 @@ I just fix install
 5. **`Visit : http://your-ip:7777/ login with User : admin Password : admin`**
 
 
--**`Change "Web ip: *" with your public IPv4 server ip at http://your-ip:7777/settings.php`**
--**`crontab -e `*/2 * * * * /etc/alternatives/php /home/fos-streaming/fos/www/cron.php`**
--**`Mysql Password : cat /root/MYSQL_ROOT_PASSWORD`**
+- Change "Web ip: *" with your public IPv4 server ip at http://your-ip:7777/settings.php
+- crontab -e `*/2 * * * * /etc/alternatives/php /home/fos-streaming/fos/www/cron.php
+- Mysql Password : cat /root/MYSQL_ROOT_PASSWORD
 
 
 ### Change port of panel
